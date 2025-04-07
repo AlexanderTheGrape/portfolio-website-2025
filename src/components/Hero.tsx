@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -46,12 +47,16 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="flex gap-4"
         >
-          <Button size="lg" variant="default">
-            View Projects
-          </Button>
-          <Button size="lg" variant="outline" className="bg-transparent">
-            Contact Me
-          </Button>
+          <Link href="/projects">
+            <Button size="lg" variant="default">
+              View Projects
+            </Button>
+          </Link>
+          <Link href="/contact">
+            <Button size="lg" variant="outline" className="bg-transparent">
+              Contact Me
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </div>
