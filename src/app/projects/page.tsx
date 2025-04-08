@@ -3,31 +3,32 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Navbar from '@/components/Navbar';
+import Image from 'next/image';
 
 const projects = [
   {
     title: 'Home Network Hosting & Security',
     description: 'Designed and configured a secure, self-hosted environment for a personal website and database on a Linux machine. Implemented firewall rules and network segmentation via a DMZ, enabling remote SSH access and internet-facing web services without compromising internal network security.',
     technologies: ['Linux', 'Networking', 'SSH', 'Firewall', 'DMZ (Demilitarized Zone)', 'Port Forwarding', 'Static IP'],
-    image: '/portfolio-website.png',
+    image: '/dmz-network-diagram-2.png',
   },
   {
     title: 'Taco Cloud - Online shop simulation',
     description: 'Developed a backend-driven web app in Java with Spring Boot to simulate a taco ordering system. Integrated form validation, relational database persistence, and static UI with Thymeleaf. Enhanced functionality by logging user access data, tracking daily visits, and building a structured navigation flow for improved user experience.',
     technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Thymeleaf'],
-    image: '/portfolio-website.png',
+    image: '/tacocloud4.png',
   },
-  {
+  { 
     title: 'Portfolio Website',
     description: 'Built a sleek, responsive personal website using TypeScript, React with Next.js, Tailwind CSS, shadCN UI, and Framer Motion. Showcases development skills and project portfolio with a focus on clean UX, interactive design, and performance optimization.',
     technologies: ['Cursor AI', 'TypeScript', 'React', 'Next.js', 'Tailwind', 'Framer Motion'],
-    image: '/portfolio-website.jpg',
+    image: '/portfolio-website.png',
   },
   {
     title: 'Publications',
     description: '<a href="https://medium.com/@amonk446/how-to-achieve-a-java-certification-from-oracle-1f64e2f553b1">How to achieve a Java Certification from Oracle</a>',
     technologies: [],
-    image: '/portfolio-website.jpg',
+    image: '/man-up-java-mountain.jpg',
   },
 ];
 
@@ -53,7 +54,15 @@ const ProjectsPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-lg transition-shadow">
+                <Card className="h-full hover:shadow-lg transition-shadow overflow-hidden">
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <CardHeader>
                     <CardTitle>{project.title}</CardTitle>
                     <CardDescription>{project.description}</CardDescription>
