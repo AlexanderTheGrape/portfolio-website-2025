@@ -51,7 +51,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               variant="default"
-              className="transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="transition-all duration-300 hover:scale-105 hover:shadow-lg hover:border-2 hover:border-white"
             >
               View Projects
             </Button>
