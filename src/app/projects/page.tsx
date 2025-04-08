@@ -22,8 +22,8 @@ const projects = [
   },
   { 
     title: 'Portfolio Website',
-    description: 'Built a sleek, responsive personal website using TypeScript, React with Next.js, Tailwind CSS, shadCN UI, and Framer Motion. Showcases development skills and project portfolio with a focus on clean UX, interactive design, and performance optimization.',
-    technologies: ['Cursor AI', 'TypeScript', 'React', 'Next.js', 'Tailwind', 'Framer Motion'],
+    description: 'Built a sleek, responsive personal website using TypeScript, React with Next.js, Tailwind CSS, shadCN UI, and Framer Motion, with the help of AI. Showcases projects, with a focus on clean UX, interactive design, and performance optimization.',
+    technologies: ['AI', 'TypeScript', 'React', 'Next.js', 'Tailwind', 'Framer Motion'],
     image: '/portfolio-website.png',
   },
   {
