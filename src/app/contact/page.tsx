@@ -1,11 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Navbar from '@/components/Navbar';
+import { Mail, Phone, MapPin, Linkedin} from 'lucide-react';
 
 const ContactPage = () => {
   return (
@@ -18,45 +16,70 @@ const ContactPage = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-4xl font-bold mb-8 text-center"
           >
-            Get in Touch
+            Contact Information
           </motion.h1>
 
           <Card>
             <CardHeader>
-              <CardTitle>Contact Form</CardTitle>
+              <CardTitle>Get in Touch</CardTitle>
               <CardDescription>
-                Fill out the form below and I'll get back to you as soon as possible.
+                Feel free to reach out to me through any of the following channels.
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <form className="space-y-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium">
-                    Name
-                  </label>
-                  <Input id="name" placeholder="Your name" />
+            <CardContent className="space-y-6">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 }}
+                className="flex items-center space-x-4"
+              >
+                <Mail className="h-5 w-5 text-primary" />
+                <div>
+                  <p className="font-medium">Email</p>
+                  <p className="text-muted-foreground">amonk446@gmail.com</p>
                 </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium">
-                    Email
-                  </label>
-                  <Input id="email" type="email" placeholder="your.email@example.com" />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+                className="flex items-center space-x-4"
+              >
+                <Phone className="h-5 w-5 text-primary" />
+                <div>
+                  <p className="font-medium">Phone</p>
+                  <p className="text-muted-foreground">+61(0) 405 644 770  </p>
                 </div>
-                
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-sm font-medium">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    placeholder="Your message..."
-                    className="min-h-[150px]"
-                  />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 }}
+                className="flex items-center space-x-4"
+              >
+                <MapPin className="h-5 w-5 text-primary" />
+                <div>
+                  <p className="font-medium">Location</p>
+                  <p className="text-muted-foreground">Sydney, NSW</p>
                 </div>
-                
-                <Button className="w-full">Send Message</Button>
-              </form>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 }}
+                className="flex items-center space-x-4"
+              >
+                <Linkedin className="h-5 w-5 text-primary" />
+                <div>
+                  <p className="font-medium">LinkedIn</p>
+                  <p className="text-muted-foreground">
+                    <a href="https://www.linkedin.com/in/alex-monk-731b08171/" className="hover:underline">alex-monk-731b08171</a>
+                  </p>
+                </div>
+              </motion.div>
             </CardContent>
           </Card>
         </div>
