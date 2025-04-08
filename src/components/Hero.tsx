@@ -29,7 +29,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold text-center mb-6"
         >
-          alexmonk.au
+          Welcome to My Portfolio
         </motion.h1>
 
         <motion.p
@@ -38,7 +38,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl md:text-2xl text-center mb-8 max-w-2xl"
         >
-          welcome to my portfolio
+          Crafting digital experiences with modern web technologies
         </motion.p>
 
         <motion.div
@@ -48,13 +48,21 @@ const Hero = () => {
           className="flex gap-4"
         >
           <Link href="/projects">
-            <Button size="lg" variant="default">
+            <Button 
+              size="lg" 
+              variant="default"
+              className="transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            >
               View Projects
             </Button>
           </Link>
           <Link href="/contact">
-            <Button size="lg" variant="outline" className="bg-transparent">
-              Contact
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="bg-transparent border-2 border-white hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            >
+              Contact Me
             </Button>
           </Link>
         </motion.div>
