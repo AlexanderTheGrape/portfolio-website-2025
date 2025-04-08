@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Navbar from '@/components/Navbar';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const projects = [
   {
@@ -17,6 +18,7 @@ const projects = [
     description: 'Developed a backend-driven web app in Java with Spring Boot to simulate a taco ordering system. Integrated form validation, relational database persistence, and static UI with Thymeleaf. Enhanced functionality by logging user access data, tracking daily visits, and building a structured navigation flow for improved user experience.',
     technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Thymeleaf'],
     image: '/tacocloud4.png',
+    link: 'http://tacocloud.alexmonk.au',
   },
   { 
     title: 'Portfolio Website',
@@ -54,32 +56,63 @@ const ProjectsPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <Card className="h-full hover:shadow-lg transition-shadow overflow-hidden">
-                  <div className="relative h-48 w-full">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <CardHeader>
-                    <CardTitle>{project.title}</CardTitle>
-                    <CardDescription>{project.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 bg-primary/10 text-primary rounded-full text-sm"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                {project.link ? (
+                  <Link href={project.link} target="_blank" rel="noopener noreferrer">
+                    <Card className="h-full hover:shadow-lg transition-shadow overflow-hidden cursor-pointer">
+                      <div className="relative h-48 w-full">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <CardHeader>
+                        <CardTitle>{project.title}</CardTitle>
+                        <CardDescription>{project.description}</CardDescription>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="flex flex-wrap gap-2">
+                          {project.technologies.map((tech) => (
+                            <span
+                              key={tech}
+                              className="px-2 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                ) : (
+                  <Card className="h-full hover:shadow-lg transition-shadow overflow-hidden">
+                    <div className="relative h-48 w-full">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                  </CardContent>
-                </Card>
+                    <CardHeader>
+                      <CardTitle>{project.title}</CardTitle>
+                      <CardDescription dangerouslySetInnerHTML={{ __html: project.description }} />
+                    </CardHeader>
+                    <CardContent>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-2 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                )}
               </motion.div>
             ))}
           </div>
