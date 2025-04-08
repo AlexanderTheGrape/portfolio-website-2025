@@ -3,20 +3,21 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      >
-        <source src="/hero-video.mp4" type="video/mp4" />
-      </video>
+      {/* Stars Background Image */}
+      <div className="absolute inset-0 w-full h-full">
+        <Image
+          src="/stars-background.jpg"
+          alt="Stars background"
+          fill
+          priority
+          className="object-cover"
+        />
+      </div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
@@ -38,7 +39,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl md:text-2xl text-center mb-8 max-w-2xl"
         >
-          Welcome to my portfolio
+          welcome to my portfolio
         </motion.p>
 
         <motion.div
@@ -62,7 +63,7 @@ const Hero = () => {
               variant="outline" 
               className="bg-transparent border-2 border-white hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              Contact Me
+              Contact
             </Button>
           </Link>
         </motion.div>
