@@ -28,7 +28,7 @@ const projects = [
   },
   {
     title: 'Publications',
-    description: '<a href="https://medium.com/@amonk446/how-to-achieve-a-java-certification-from-oracle-1f64e2f553b1">How to achieve a Java Certification from Oracle</a>',
+    description: '<a href="https://medium.com/@amonk446/how-to-achieve-a-java-certification-from-oracle-1f64e2f553b1" target="_blank">How to achieve a Java Certification from Oracle</a>',
     technologies: [],
     image: '/man-up-java-mountain.jpg',
   },
