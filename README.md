@@ -8,6 +8,9 @@ First, run the development server:
 
 ```bash
 npm run dev
+# or, for production
+npm run build
+npm run start
 # or
 yarn dev
 # or
