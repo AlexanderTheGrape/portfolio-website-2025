@@ -11,6 +11,10 @@ npm run dev
 # or, for production
 npm run build
 npm run start
+# or, for cloudflare pages compatibility
+npm run pages:build #Runs next build, and then transforms its output to be compatible with Cloudflare Pages.
+npm run preview # Builds your app, and runs it locally in workerd ↗, the open-source Workers Runtime. (next dev will only run your app in Node.js)
+npm run deploy # builds and deploys to cloudflare
 # or
 yarn dev
 # or
