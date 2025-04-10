@@ -1,7 +1,10 @@
-name = "alexmonkpersonalbucket"
-compatibility_date = "2024-09-23"
+main = ".open-next/worker.js"
+name = "alexmonk.au next.js website"
+compatibility_date = "2025-03-25"
 compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = ".vercel/output/static"
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
 routes = [
   { pattern = "alexmonk.au", custom_domain = true }
 ]
