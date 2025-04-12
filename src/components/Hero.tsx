@@ -8,15 +8,13 @@ const Hero = () => {
   return (
     <div className="relative h-screen w-full overflow-hidden">
       {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      >
-        <source src="/hero-video.mp4" type="video/mp4" />
-      </video>
+      <iframe
+        // https://drive.google.com/file/d/1jAqoJk2iY0C946U5yFbcb-kWDOkh7SB-/view?usp=sharing
+        // src="https://drive.google.com/file/d/1jAqoJk2iY0C946U5yFbcb-kWDOkh7SB-/preview&muted&loop=''"
+        src="https://drive.google.com/file/d/1jAqoJk2iY0C946U5yFbcb-kWDOkh7SB-/view?usp=sharing"
+        width="1920"
+        height="1080"
+        allow="autoplay"></iframe>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50" />
