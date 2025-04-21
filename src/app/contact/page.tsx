@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import Navbar from '@/components/Navbar';
-import { Mail, Phone, MapPin, Linkedin} from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
 
 const ContactPage = () => {
   return (
@@ -76,7 +76,22 @@ const ContactPage = () => {
                 <div>
                   <p className="font-medium text-white">LinkedIn</p>
                   <p className="text-gray-300">
-                    <a href="https://www.linkedin.com/in/alex-monk-731b08171/" className="hover:text-primary transition-colors">alex-monk-731b08171</a>
+                    <a href="https://www.linkedin.com/in/alex-monk-731b08171/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline transition-all duration-300">alex-monk-731b08171</a>
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+                className="flex items-center space-x-4"
+              >
+                <Github className="h-5 w-5 text-white" />
+                <div>
+                  <p className="font-medium text-white">GitHub</p>
+                  <p className="text-gray-300">
+                    <a href="https://github.com/AlexanderTheGrape" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline transition-all duration-300">AlexanderTheGrape</a>
                   </p>
                 </div>
               </motion.div>
