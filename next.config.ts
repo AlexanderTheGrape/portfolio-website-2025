@@ -6,9 +6,9 @@ const nextConfig = {
     unoptimized: true,
   },
   // Disable server-side features
-  experimental: {
-    appDir: true,
-  },
+  // experimental: {
+  //   appDir: true,
+  // },
   // devIndicators: false
 };
 
