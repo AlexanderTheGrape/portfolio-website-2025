@@ -8,6 +8,19 @@ import Link from 'next/link';
 
 const projects = [
   {
+    title: 'Taco Cloud - Online shop simulation',
+    description: `Developed a backend-driven web app in Java with Spring Boot to simulate a taco ordering system. 
+    Integrated form validation, relational database persistence, and static UI with Thymeleaf. 
+    Enhanced functionality by logging user access data, tracking daily visits, and building a structured navigation flow 
+    for improved user experience.`,
+    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Thymeleaf'],
+    image: '/tacocloud4.png',
+    link: 'https://tacocloud.alexmonk.au',
+    linkText: 'View Taco Cloud on GitHub',
+    link2: 'https://github.com/AlexanderTheGrape/TacoCloud',
+    linkText2: 'Open Taco Cloud in a new tab',
+  },
+  {
     title: 'Home Network Hosting & Security',
     description: `Designed and configured a secure, self-hosted environment for a personal website and database on a Linux machine. 
     Implemented firewall rules and network segmentation via a DMZ, enabling remote SSH access and internet-facing web services 
@@ -16,17 +29,6 @@ const projects = [
     image: '/dmz-network-diagram-2.png',
   },
   {
-    title: 'Taco Cloud - Online shop simulation',
-    description: `Developed a backend-driven web app in Java with Spring Boot to simulate a taco ordering system. 
-    Integrated form validation, relational database persistence, and static UI with Thymeleaf. 
-    Enhanced functionality by logging user access data, tracking daily visits, and building a structured navigation flow 
-    for improved user experience.`,
-    linkText: 'View Taco Cloud on GitHub',
-    technologies: ['Java', 'Spring Boot', 'PostgreSQL', 'Thymeleaf'],
-    image: '/tacocloud4.png',
-    link: 'https://github.com/AlexanderTheGrape/TacoCloud',
-  },
-  { 
     title: 'Portfolio Website',
     description: `Built a sleek, responsive personal website using TypeScript, React with Next.js, Tailwind CSS, shadCN UI, 
     and Framer Motion, with the help of AI. Showcases projects, with a focus on clean UX, interactive design, 
@@ -81,14 +83,24 @@ const ProjectsPage = () => {
                         <CardDescription className="text-gray-300">
                           {project.description}
                           {project.linkText && (
-                            <a 
-                              href={project.link} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="text-blue-400 hover:underline transition-all duration-300 block mt-2"
-                            >
-                              {project.linkText}
-                            </a>
+                            <div className="flex flex-col gap-1 mt-2">
+                              <a 
+                                href={project.link} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-blue-400 hover:underline transition-all duration-300"
+                              >
+                                {project.linkText2}
+                              </a>
+                              <a 
+                                href={project.link2} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-blue-400 hover:underline transition-all duration-300"
+                              >
+                                {project.linkText}
+                              </a>
+                            </div>
                           )}
                         </CardDescription>
                       </CardHeader>
@@ -121,14 +133,24 @@ const ProjectsPage = () => {
                       <CardDescription className="text-gray-300">
                         {project.description}
                         {project.linkText && (
-                          <a 
-                            href={project.link} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-blue-400 hover:underline transition-all duration-300 block mt-2"
-                          >
-                            {project.linkText}
-                          </a>
+                          <div className="flex flex-col gap-1 mt-2">
+                            <a 
+                              href={project.link} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-blue-400 hover:underline transition-all duration-300"
+                            >
+                              {project.linkText2}
+                            </a>
+                            <a 
+                              href={project.link2} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-blue-400 hover:underline transition-all duration-300"
+                            >
+                              {project.linkText}
+                            </a>
+                          </div>
                         )}
                       </CardDescription>
                     </CardHeader>
