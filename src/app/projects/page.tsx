@@ -8,6 +8,16 @@ import Link from 'next/link';
 
 const projects = [
   {
+    title: 'MTG Portfolio & Card Scanning App',
+    description: `Owned system design and relational database schema with optimized indexes and queries. 
+    Built card & pricing data pipelines using scheduled batch jobs in GCP. Trained a machine learning model 
+    for computer vision to scan and match cards via trigraph matching.`,
+    technologies: ['GCP', 'Machine Learning', 'Computer Vision', 'Relational Database', 'Data Pipelines', 'Batch Processing'],
+    image: '/logo.webp',
+    link: 'https://www.scattershot.au',
+    linkText: 'Visit Scattershot.au',
+  },
+  {
     title: 'Taco Cloud - Online shop simulation',
     description: `Developed a backend-driven web app in Java with Spring Boot to simulate a taco ordering system. 
     Integrated form validation, relational database persistence, and static UI with Thymeleaf. 
@@ -75,7 +85,7 @@ const ProjectsPage = () => {
                           src={project.image}
                           alt={project.title}
                           fill
-                          className="object-cover"
+                          className={project.title === 'MTG Portfolio & Card Scanning App' ? 'object-contain' : 'object-cover'}
                         />
                       </div>
                       <CardHeader>
@@ -125,7 +135,7 @@ const ProjectsPage = () => {
                         src={project.image}
                         alt={project.title}
                         fill
-                        className="object-cover"
+                        className={project.title === 'MTG Portfolio & Card Scanning App' ? 'object-contain' : 'object-cover'}
                       />
                     </div>
                     <CardHeader>
